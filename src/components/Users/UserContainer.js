@@ -4,6 +4,8 @@ import {fetchUsers} from '../../redux/api/userApi.js'
 
 function UserContainer({userData, fetchUsers}) {
     
+    console.log(userData)
+
     React.useEffect(() => {
         fetchUsers()
     }, [])
@@ -14,7 +16,7 @@ function UserContainer({userData, fetchUsers}) {
             {userData.error ? <h2>{userData.error}</h2> : ""}
             {
                 userData && userData.users ? (
-                    <div>
+                    <div data-testid="users-rendered">
                         <h1>List of Users From Jsonplaceholder</h1>
                         {userData.users.map(user => <p>{user.name}</p>)}
                     </div>

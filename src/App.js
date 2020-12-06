@@ -25,7 +25,7 @@ function App() {
         <button onClick={() => handleCategory("Cakes")}>Cakes</button>
         <button onClick={() => handleCategory("Ice Cream")}>Ice Creams</button>
         <button onClick={() => handleCategory("Item Container")}>Item Container</button>
-        <button onClick={() => handleCategory("Users")}>Users</button>
+        <button onClick={() => handleCategory("Users")} data-testid="users-button">Users</button>
         
         <div>
           {
